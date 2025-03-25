@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Higor Leandro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #2e2e2e; /* Fundo cinza escuro */
+            color: #fff; /* Cor do texto alterada para branco para contraste */
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo h1 {
+            margin-left: 20px;
+            font-size: 28px;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            float: right;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff9900;
+        }
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            width: 85%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-family: 'Helvetica', sans-serif;
+            color: #fff;
+        }
+
+        .sobre, .projetos, .contato {
+            background-color: #444; /* Fundo das seções em cinza mais claro */
+            margin-bottom: 40px;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sobre p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #ccc;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .projeto-lista {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .projeto {
+            background-color: #555; /* Fundo das caixas de projeto em cinza mais claro */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .projeto:hover {
+            transform: translateY(-10px);
+        }
+
+        .projeto img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .projeto h3 {
+            font-size: 22px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .projeto p {
+            font-size: 16px;
+            color: #ccc;
+        }
+
+        .btn {
+            background-color: #ff9900;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #cc7a00;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form input, form textarea {
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        form input:focus, form textarea:focus {
+            border-color: #ff9900;
+        }
+
+        form button {
+            background-color: #333;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #ff9900;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header .logo h1 {
+                font-size: 24px;
+            }
+
+            nav ul {
+                display: block;
+                text-align: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .container {
+                width: 95%;
+            }
+
+            .projeto-lista {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>Portfólio de Higor Leandro</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <p>Olá! Meu nome é Higor Leandro, tenho 25 anos e sou desenvolvedor com 2 anos de experiência na área. Sou apaixonado por tecnologia e busco sempre inovar em meus projetos. Trabalho com diversas tecnologias e estou sempre em busca de novos desafios para crescer e evoluir como profissional.</p>
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projetos" class="projetos">
+        <div class="container">
+            <h2>Meus Projetos</h2>
+
+            <!-- Desenvolvimento Web -->
+            <div class="projeto-lista">
+                <h3>Projetos de Desenvolvimento Web</h3>
+                <div class="projeto">
+                    <img src="imagem-do-projeto1.jpg" alt="Projeto 1">
+                    <h3>Projeto Web 1</h3>
+                    <p>Desenvolvimento de um site responsivo utilizando HTML, CSS e JavaScript. Projeto focado em otimizar a performance e a experiência do usuário.</p>
+                    <a href="link-do-projeto" class="btn">Ver Projeto</a>
+                </div>
+                <div class="projeto">
+                    <img src="imagem-do-projeto2.jpg" alt="Projeto 2">
+                    <h3>Projeto Web 2</h3>
+                    <p>Desenvolvimento de uma aplicação interativa utilizando React e Redux para gerenciamento de estado.</p>
+                    <a href="link-do-projeto" class="btn">Ver Projeto</a>
+                </div>
+            </div>
+
+            <!-- Desenvolvimento Mobile -->
+            <div class="projeto-lista">
+                <h3>Projetos de Desenvolvimento Mobile</h3>
+                <div class="projeto">
+                    <img src="imagem-do-projeto3.jpg" alt="Projeto 3">
+                    <h3>App Mobile 1</h3>
+                    <p>Criação de aplicativo móvel para Android utilizando Kotlin, com integração a APIs externas e banco de dados local.</p>
+                    <a href="link-do-projeto" class="btn">Ver Projeto</a>
+                </div>
+                <div class="projeto">
+                    <img src="imagem-do-projeto4.jpg" alt="Projeto 4">
+                    <h3>App Mobile 2</h3>
+                    <p>Desenvolvimento de app multiplataforma com Flutter, com foco em performance e design moderno.</p>
+                    <a href="link-do-projeto" class="btn">Ver Projeto</a>
+                </div>
+            </div>
+
+            <!-- Projetos de Design -->
+            <div class="projeto-lista">
+                <h3>Projetos de Design</h3>
+                <div class="projeto">
+                    <img src="imagem-do-projeto5.jpg" alt="Projeto 5">
+                    <h3>Design 1</h3>
+                    <p>Criação de identidade visual para uma empresa, incluindo logotipo, paleta de cores e layout para material promocional.</p>
+                    <a href="link-do-projeto" class="btn">Ver Projeto</a>
+                </div>
+                <div class="projeto">
+                    <img src="imagem-do-projeto6.jpg" alt="Projeto 6">
+                    <h3>Design 2</h3>
+                    <p>Desenvolvimento de UI/UX para aplicativo, focado em facilitar a navegação e melhorar a experiência do usuário.</p>
+                    <a href="link-do-projeto" class="btn">Ver Projeto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form id="formContato" action="javascript:void(0);">
+                <label for="nome">Seu Nome</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Seu E-mail</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="mensagemSucesso" style="display:none; color: green; text-align: center; margin-top: 20px;">
+                Obrigado por entrar em contato, sua mensagem foi enviada com sucesso!
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Portfólio de Higor Leandro - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Script para exibir uma mensagem de sucesso após envio do formulário
+        document.getElementById("formContato").addEventListener("submit", function() {
+            document.getElementById("formContato").reset(); // Reseta o formulário
+            document.getElementById("mensagemSucesso").style.display = "block"; // Exibe a mensagem de sucesso
+            setTimeout(function() {
+                document.getElementById("mensagemSucesso").style.display = "none"; // Esconde a mensagem após 5 segundos
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
