@@ -3,29 +3,28 @@ name: Deploy para GitHub pages
 on:
   push:
      branches:
+      - main # Execute quando ha mudanças na bramch principal
 
-        - main # Execute quando ha mudanças na bramch principal
+permissions:
+  contents: write 
+  pages: write
+  id-token: write
 
- permissions:
-   contents: write 
-   pages: write
-   id-token: write
-
-   jobs:
-    deploy:
+jobs:
+  deploy:
     runs-on: ubuntu-latest
-    
+  
     steps: 
-     - name: Checkout do repositorio
-       uses: actions/checkout@v4
+      - name: Checkout do repositorio
+        uses: actions/checkout@v4
 
-    - name: configurar GitHub Pages
-      uses: actions/configure-pages@v5
+      - name: configurar GitHub Pages
+        uses: actions/configure-pages@v5
 
-   - name: Criar artefato para deploy
-     uses: actions/upload-pages-artifact@v3 # Pode tentar tambem a @v2 se funcionar
-     with:
-       path:
+      - name: Criar artefato para deploy
+        uses: actions/upload-pages-artifact@v3 # Pode tentar tambem a @v2 se funcionar
+        with:
+          path: .
 
-    - name: publicar no GitHub Pages 
-      uses: actions/deploy-pages@v4 
+      - name: publicar no GitHub Pages
+        uses: actions/deploy-pages@v4 
